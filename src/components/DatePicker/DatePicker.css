@@ -1,0 +1,31 @@
+.Date__container
+{
+    display: flex;
+    align-items: center;
+    margin: 0 11pt;
+    border-radius: 10px;
+    outline: 0;
+}
+    .Date__element:focus { border-color: #3F8AE0; }
+    .Date__element
+    {
+        position: relative;
+        width: 100%;
+        height: 44px;
+        padding: 12px 40px 12px 12px;
+        font-size: 16px;
+        line-height: 19px;
+        z-index: 2;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: #F2F3F5;
+        border: 1px solid #D5D5D7;
+    }
+
+    .Date__icon
+    {
+        position: absolute;
+        color: #99A2AD;
+        z-index: 2;
+        right: 21px;
+    }
