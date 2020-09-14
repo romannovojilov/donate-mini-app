@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import '@vkontakte/vkui/dist/vkui.css';
-
 import './App.css';
 
 import Donations from './panels/Donations/Donations';
@@ -9,7 +8,9 @@ import DonationType from './panels/DonationType/DonationType';
 import PurposedFund from './panels/PurposedFund/PurposedFund';
 import AdditionalFund from './panels/AdditionalFund/AdditionalFund';
 import { useScreenSpinner } from './hooks/useScreenSpinner';
+import Post from './panels/post/Post';
 import { useSelector } from 'react-redux';
+
 
 const App = () => {
     const [activePanel, setActivePanel] = useState('donations');
@@ -29,6 +30,7 @@ const App = () => {
             <DonationType id='donation-type' go={go} className="App__panel" />
             <PurposedFund id='purposed-fund' go={go} type={type} className="App__panel" />
             <AdditionalFund id='additional-fund' go={go} type={type} className="App__panel" />
+            <Post id='post'></Post>
         </View>
     );
 }

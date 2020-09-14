@@ -1,0 +1,25 @@
+.post{
+    &__header{
+        height: 140px;
+        display: flex;
+        img{
+            object-fit: cover;
+        }
+    }
+}
+.Description{
+    &__list{
+        padding: 0;
+        list-style: square;
+        list-style-position: inside;
+    }
+}
+.Progress_green{
+    .Progress__in{
+        background-color: #4BB34B;
+    }
+}
+.Post__progress{
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
