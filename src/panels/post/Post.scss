@@ -1,0 +1,9 @@
+.post{
+    &__header{
+        height: 140px;
+        display: flex;
+        img{
+            object-fit: cover;
+        }
+    }
+}
