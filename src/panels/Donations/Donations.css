@@ -1,0 +1,10 @@
+.Donations__empty-content {
+    display: flex;
+    justify-content: center;
+    height: calc(94vh -  calc(var(--panelheader_height_ios) + var(--safe-area-inset-top)));
+}
+
+.Donations__actions {
+    display: flex;
+    justify-content: center;
+}

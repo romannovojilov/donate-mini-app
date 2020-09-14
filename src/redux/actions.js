@@ -5,6 +5,7 @@ import { CREATE_DONATE_REQUEST, DONATE } from "./types"
  * @param {Object} newDonateRequest
  * @example <caption>newDonateRequest struct.</caption>
  * const newDonateRequest = {
+ *     type: 0 | 1,
  *     photo: '',
  *     name: '',
  *     neededAmount: 0

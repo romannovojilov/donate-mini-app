@@ -10,7 +10,7 @@ export function useScreenSpinner(Component = ScreenSpinner, props = { size: 'lar
 
     return [
         spinner,
-        showSpinner,
-        hideSpinner
+        hideSpinner,
+        showSpinner
     ]
 }
