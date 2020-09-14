@@ -20,16 +20,16 @@ const Donations = ({ id, go, className = '' }) => {
                         <Div key={donateRequest.id}>
                             <DonateRequestCard
                                 donateRequest={donateRequest}
-                                onHelp={() => console.log("Обрыв сценария по представленному дизайну!")}
+                                onHelp={() => console.log("Обрыв сценария по предоставленному дизайну!")}
                             />
                         </Div>
                     ))}
                     <Div className="Donations__actions">
-                        <Button size="xl" level="2">Создать сбор</Button>
+                        <Button size="xl" level="2" onClick={go} data-to="donation-type">Создать сбор</Button>
                     </Div>
                 </Group>
                 : <Group className="Donations__empty-content">
-                    <Placeholder action={<Button size="l">Создать сбор</Button>} >
+                    <Placeholder action={<Button size="l" onClick={go} data-to="donation-type">Создать сбор</Button>} >
                         У Вас пока нет сборов.
                         <br />Начните доброе дело.
                     </Placeholder>

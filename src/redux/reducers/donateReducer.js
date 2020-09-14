@@ -1,4 +1,4 @@
-import { CREATE_DONATE_REQUEST, DONATE } from "../types";
+import { CREATE_DONATE_REQUEST, DONATE, SET_TYPE } from "../types";
 
 /**
  * @example <caption>Entities.</caption>
@@ -36,6 +36,7 @@ import { CREATE_DONATE_REQUEST, DONATE } from "../types";
  * }
  */
 const initialState = {
+    type: 0, // 0 - целевой сбор, 1 - регулярный сбор
     donateRequests: [
         {
             id: 1,
@@ -135,6 +136,8 @@ export function donateReducer(state = initialState, action) {
                     })
                 ]
             };
+        case SET_TYPE:
+            return { ...state, type: action.payload };
         default: return state;
     }
 };

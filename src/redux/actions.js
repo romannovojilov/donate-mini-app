@@ -1,4 +1,4 @@
-import { CREATE_DONATE_REQUEST, DONATE } from "./types"
+import { CREATE_DONATE_REQUEST, DONATE, SET_TYPE } from "./types"
 
 /**
  * Create new donate.
@@ -34,5 +34,16 @@ export const donate = (userId, donateRequestId, amount) => {
     return {
         type: DONATE,
         payload: { userId, donateRequestId, amount }
+    }
+}
+
+/**
+ * Set type of creational donate request.
+ * @param {number} type 0 - target, 1 - regular
+ */
+export const setType = (type) => {
+    return {
+        type: SET_TYPE,
+        payload: type
     }
 }

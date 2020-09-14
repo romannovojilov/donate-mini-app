@@ -5,29 +5,24 @@ import '@vkontakte/vkui/dist/vkui.css';
 import './App.css';
 
 import Donations from './panels/Donations/Donations';
+import DonationType from './panels/DonationType/DonationType';
 import { useScreenSpinner } from './hooks/useScreenSpinner';
-import { useSelector } from 'react-redux';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('donations');
+    const [activePanel, setActivePanel] = useState('donations');
+    const [popout, hidePopout] = useScreenSpinner();
+    useEffect(() => hidePopout(), []);
 
-	const [popout, hidePopout] = useScreenSpinner();
-	useEffect(() => hidePopout(), []);
+    const go = e => {
+        setActivePanel(e.currentTarget.dataset.to);
+    };
 
-	const state = useSelector(state => state);
-	console.log(state);
-
-
-	const go = e => {
-		setActivePanel(e.currentTarget.dataset.to);
-	};
-
-	return (
-		<View activePanel={activePanel} popout={popout}>
-			<Donations id='donations' go={go} className="App__panel" />
-		</View>
-	);
+    return (
+        <View activePanel={activePanel} popout={popout}>
+            <Donations id='donations' go={go} className="App__panel" />
+            <DonationType id='donation-type' go={go} className="App__panel" />
+        </View>
+    );
 }
 
 export default App;
-

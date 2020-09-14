@@ -1,0 +1,18 @@
+.DonationType__empty-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(94vh -  calc(var(--panelheader_height_ios) + var(--safe-area-inset-top)));
+}
+
+.DonationType__card {
+    background: #F5F5F5;
+    margin-bottom: 10px;
+}
+
+
+
+.DonationType__meta {
+    color: #6D7885;
+    margin-top: 2px;
+}
