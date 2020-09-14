@@ -4,7 +4,7 @@ import './DonateRequestCard.css';
 import { useSelector } from 'react-redux';
 
 
-const DonateRequestCard = ({ donateRequest, onHelp = () => {} }) => {
+const DonateRequestCard = ({ go, donateRequest, onHelp = () => {} }) => {
 
     const autor = useSelector(state => state.autors.find(autor => autor.id === donateRequest.autorId));
 
@@ -22,10 +22,12 @@ const DonateRequestCard = ({ donateRequest, onHelp = () => {} }) => {
 
     return (
         <Card className="DonateRequestCard" mode="shadow">
-            <img className="DonateRequestCard__photo" src={donateRequest.photo} alt={donateRequest.name} />
-            <div className="DonateRequestCard__header">
-                <Headline className="DonateRequestCard__title" weight="medium">{donateRequest.name}</Headline>
-                <Caption className="DonateRequestCard__meta" level="1" weight="regular">{autor.name} · {status}</Caption>
+            <div onClick={go} data-to="post">
+                <img className="DonateRequestCard__photo" src={donateRequest.photo} alt={donateRequest.name} />
+                <div className="DonateRequestCard__header">
+                    <Headline className="DonateRequestCard__title" weight="medium">{donateRequest.name}</Headline>
+                    <Caption className="DonateRequestCard__meta" level="1" weight="regular">{autor.name} · {status}</Caption>
+                </div>
             </div>
             <div className="DonateRequestCard__actions">
                 <div className="DonateRequestCard__progress">

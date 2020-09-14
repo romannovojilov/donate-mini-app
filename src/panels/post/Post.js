@@ -1,19 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { platform, IOS } from '@vkontakte/vkui';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
-import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Title from '@vkontakte/vkui/dist/components/Typography/Title/Title';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
-import Header from '@vkontakte/vkui/dist/components/Header/Header';
 import catImg from '../../img/Thinking-of-getting-a-cat.png';
-import HeadLine from '@vkontakte/vkui/dist/components/Typography/Headline/Headline';
 import SubHead from '@vkontakte/vkui/dist/components/Typography/Subhead/Subhead';
 import Caption from '@vkontakte/vkui/dist/components/Typography/Caption/Caption';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
@@ -23,12 +14,10 @@ import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout
 import './Post.scss';
 import '../../components/DonateRequestCard/DonateRequestCard.css'
 
-const osName = platform();
-const props = {}
-const Post = (props) => {
+
+const Post = ({ id }) => {
     console.log('OnPOST PAGE')
-    console.log(props.donateRequest)
-    return (<Panel id={props.id}>
+    return (<Panel id={id}>
         <div className='post__header'>
             <img src={catImg} alt='PostHeader' width='100%'></img>
         </div>

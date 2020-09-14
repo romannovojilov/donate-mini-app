@@ -19,6 +19,7 @@ const Donations = ({ id, go, className = '' }) => {
                     {donateRequests.map(donateRequest => (
                         <Div key={donateRequest.id}>
                             <DonateRequestCard
+                                go={go}
                                 donateRequest={donateRequest}
                                 onHelp={() => console.log("Обрыв сценария по предоставленному дизайну!")}
                             />
