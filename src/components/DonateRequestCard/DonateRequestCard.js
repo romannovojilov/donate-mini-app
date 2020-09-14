@@ -4,7 +4,7 @@ import './DonateRequestCard.css';
 import { useSelector } from 'react-redux';
 
 
-const DonateRequestCard = ({ donateRequest, onHelp = () => {} }) => {
+const DonateRequestCard = ({ go, donateRequest, onHelp = () => {} }) => {
 
     const autor = useSelector(state => state.autors.find(autor => autor.id === donateRequest.autorId));
 
@@ -32,7 +32,7 @@ const DonateRequestCard = ({ donateRequest, onHelp = () => {} }) => {
                     <Caption level="1" weight="regular" style={{ marginBottom: 8 }}>{progressLabel}</Caption>
                     <Progress value={progressPercent} />
                 </div>
-                <Button mode="outline" onClick={() => onHelp(donateRequest)}>Помочь</Button>
+                <Button mode="outline" g onClick={() => onHelp(donateRequest)}>Помочь</Button>
             </div>
         </Card>
     )

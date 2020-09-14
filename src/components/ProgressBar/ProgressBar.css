@@ -1,0 +1,35 @@
+.Progress__bar{
+    height: 24px;
+    border-radius: 6px; 
+    background: #EAECF0; 
+    color: #818C99;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.Progress__bar .centered{
+    justify-content: center;
+}
+.Progress__blank{
+    background-color: #B8C1CC;
+    opacity: 0.3;
+}
+.Progress__active{
+    position: relative;
+    z-index: 1;
+    width: 0%;
+    height: 100%;
+    background: #4BB34B;
+    border-radius: 6px;
+}
+.Progress__maxValue{
+
+}
+.up{
+    top: -6px;
+}
+.inside{
+    position: relative;
+    left: -65px;
+}
